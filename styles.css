@@ -180,13 +180,47 @@ h3{font-size:1.35rem;margin-bottom:12px}
 }
 
 
-.brand{display:flex;align-items:center}
-.brand-logo{height:58px;width:auto;display:block}
-.footer-brand{display:flex;align-items:center}
-.footer-logo{height:54px;width:auto;display:block}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  padding:6px 8px;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+}
+.brand-logo{
+  height:50px;
+  width:auto;
+  display:block;
+  filter:
+    drop-shadow(0 0 2px rgba(59,214,219,1))
+    drop-shadow(0 0 12px rgba(59,214,219,.82))
+    drop-shadow(0 0 28px rgba(59,214,219,.50))
+    drop-shadow(0 0 54px rgba(59,214,219,.28));
+}
+.brand:hover{box-shadow:none}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  padding:4px 6px;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+}
+.footer-logo{
+  height:44px;
+  width:auto;
+  display:block;
+  filter:
+    drop-shadow(0 0 2px rgba(59,214,219,1))
+    drop-shadow(0 0 10px rgba(59,214,219,.74))
+    drop-shadow(0 0 24px rgba(59,214,219,.36));
+}
 @media (max-width:680px){
-  .brand-logo{height:46px}
-  .footer-logo{height:44px}
+  .brand-logo{height:42px}
+  .footer-logo{height:40px}
 }
 
 
@@ -223,4 +257,12 @@ h3{font-size:1.35rem;margin-bottom:12px}
   .carousel-btn.prev{left:8px}
   .carousel-btn.next{right:8px}
   .slide-info{padding:18px 18px 22px}
+}
+
+.carousel{max-width:900px;margin-left:auto;margin-right:auto}
+.carousel-slide img{min-height:0}
+@media (min-width:901px){
+  .carousel-slide{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.52fr);align-items:center}
+  .carousel-slide img{aspect-ratio:1/1}
+  .slide-info{padding:34px}
 }
