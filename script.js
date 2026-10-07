@@ -42,7 +42,7 @@ if (carousel) {
   }
 
   function startAutoPlay(){
-    autoPlay = setInterval(nextSlide, 4500);
+    autoPlay = setInterval(nextSlide, 8000);
   }
 
   function resetAutoPlay(){
